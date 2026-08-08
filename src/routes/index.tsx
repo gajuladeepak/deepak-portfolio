@@ -56,8 +56,8 @@ const PIPELINE = [
   { label: "Veracode", icon: ShieldCheck },
   { label: "Docker Build", icon: Container },
   { label: "Amazon ECR", icon: Cloud },
-  { label: "Amazon EKS", icon: Server },
-  { label: "Helm Deploy", icon: Boxes },
+  { label: "Helm Deploy", icon: Server },
+  { label: "Amazon EKS", icon: Boxes },
 ];
 
 function Home() {
