@@ -144,82 +144,81 @@ function Experience() {
                 onClick={() => setOpen(isOpen ? -1 : i)}
                 className="w-full text-left glass rounded-xl p-6 hover:border-neon-blue/40 transition-all duration-300""
               >
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <div>
-                    <h3 className="font-display text-lg font-semibold">
-                      {r.role} ·{" "}
-                      <span className="text-gradient">{r.company}</span>
-                    </h3>
-                    <p className="font-mono text-xs text-muted-foreground">
-                      {r.period}
-                    </p>
-                  </div>
-                  <ChevronRight
-                    className={`h-4 w-4 text-muted-foreground transition-transform ${
-                      isOpen ? "rotate-90" : ""
-                    }`}
-                  />
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <div>
+                  <h3 className="font-display text-lg font-semibold">
+                    {r.role} ·{" "}
+                    <span className="text-gradient">{r.company}</span>
+                  </h3>
+                  <p className="font-mono text-xs text-muted-foreground">
+                    {r.period}
+                  </p>
                 </div>
+                <ChevronRight
+                  className={`h-4 w-4 text-muted-foreground transition-transform ${isOpen ? "rotate-90" : ""
+                    }`}
+                />
+              </div>
 
-                {isOpen && (
-                  <div className="mt-6 grid gap-6 md:grid-cols-2 animate-in fade-in duration-300">
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest font-mono text-muted-foreground mb-2">
-                        Responsibilities
-                      </p>
-                      <ul className="space-y-3 text-[15px] leading-7">
-                        {r.responsibilities.map((x) => (
-                          <li key={x} className="flex gap-2">
-                            <span className="text-neon-blue">▸</span>
-                            {x}
-                          </li>
-                        ))}
-                      </ul>
+              {isOpen && (
+                <div className="mt-6 grid gap-6 md:grid-cols-2 animate-in fade-in duration-300">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-mono text-muted-foreground mb-2">
+                      Responsibilities
+                    </p>
+                    <ul className="space-y-3 text-[15px] leading-7">
+                      {r.responsibilities.map((x) => (
+                        <li key={x} className="flex gap-2">
+                          <span className="text-neon-blue">▸</span>
+                          {x}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-mono text-muted-foreground mb-2">
+                      Achievements
+                    </p>
+                    <ul className="space-y-3 text-[15px] leading-7">
+                      {r.achievements.map((x) => (
+                        <li key={x} className="flex gap-2">
+                          <span className="text-success">✓</span>
+                          {x}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="md:col-span-2 flex flex-wrap gap-4 items-center pt-2 border-t border-border">
+                    <div className="flex flex-wrap gap-1.5">
+                      {r.stack.map((s) => (
+                        <span
+                          key={s}
+                          className="px-2 py-1 rounded-md glass text-[11px] font-mono"
+                        >
+                          {s}
+                        </span>
+                      ))}
                     </div>
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest font-mono text-muted-foreground mb-2">
-                        Achievements
-                      </p>
-                      <ul className="space-y-3 text-[15px] leading-7">
-                        {r.achievements.map((x) => (
-                          <li key={x} className="flex gap-2">
-                            <span className="text-success">✓</span>
-                            {x}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="md:col-span-2 flex flex-wrap gap-4 items-center pt-2 border-t border-border">
-                      <div className="flex flex-wrap gap-1.5">
-                        {r.stack.map((s) => (
-                          <span
-                            key={s}
-                            className="px-2 py-1 rounded-md glass text-[11px] font-mono"
-                          >
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="ml-auto flex gap-3">
-                        {r.metrics.map(([k, v]) => (
-                          <div key={k} className="text-right">
-                            <div className="font-display font-semibold text-gradient">
-                              {v}
-                            </div>
-                            <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
-                              {k}
-                            </div>
+                    <div className="ml-auto flex gap-3">
+                      {r.metrics.map(([k, v]) => (
+                        <div key={k} className="text-right">
+                          <div className="font-display font-semibold text-gradient">
+                            {v}
                           </div>
-                        ))}
-                      </div>
+                          <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
+                            {k}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                )}
-              </button>
+                </div>
+              )}
+            </button>
             </li>
-          );
+      );
         })}
-      </ol>
-    </div>
+    </ol>
+    </div >
   );
 }

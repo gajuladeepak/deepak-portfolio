@@ -56,7 +56,7 @@ const CATEGORIES: Category[] = [
         level: 92,
         years: "4 y",
       },
-  ],
+    ],
   },
   {
     title: "Infrastructure as Code",
@@ -86,26 +86,26 @@ const CATEGORIES: Category[] = [
     icon: Container,
     accent: "from-neon-cyan to-neon-purple",
     skills: [
-            {
-              name: "Amazon EKS",
-              level: 94,
-              years: "3+ y",
-            },
-            {
-              name: "Docker",
-              level: 95,
-              years: "4+ y",
-            },
-            {
-              name: "Helm",
-              level: 90,
-              years: "3 y",
-            },
-            {
-              name: "Kubernetes",
-              level: 94,
-              years: "3+ y",
-            },
+      {
+        name: "Amazon EKS",
+        level: 94,
+        years: "3+ y",
+      },
+      {
+        name: "Docker",
+        level: 95,
+        years: "4+ y",
+      },
+      {
+        name: "Helm",
+        level: 90,
+        years: "3 y",
+      },
+      {
+        name: "Kubernetes",
+        level: 94,
+        years: "3+ y",
+      },
     ],
   },
   {
@@ -236,9 +236,9 @@ function Skills() {
       </h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
         <p className="mt-4 max-w-3xl text-muted-foreground leading-8">
-            Hands-on experience across AWS, Kubernetes, Terraform, Docker, Jenkins,
-            Linux, Monitoring and DevSecOps gained while building and supporting
-            production enterprise applications.
+          Hands-on experience across AWS, Kubernetes, Terraform, Docker, Jenkins,
+          Linux, Monitoring and DevSecOps gained while building and supporting
+          production enterprise applications.
         </p>
       </p>
 
