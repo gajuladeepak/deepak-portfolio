@@ -167,6 +167,43 @@ function Resume() {
             </p>
           </div>
         </section>
+        <section className="mt-8 border-t border-border pt-6">
+          <h3 className="font-display font-semibold mb-4">
+            Key Achievements
+          </h3>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+            <div className="glass rounded-xl p-4 text-center">
+              <h4 className="text-2xl font-bold text-neon-blue">25+</h4>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Production Microservices
+              </p>
+            </div>
+
+            <div className="glass rounded-xl p-4 text-center">
+              <h4 className="text-2xl font-bold text-neon-blue">70%</h4>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Faster Infrastructure Provisioning
+              </p>
+            </div>
+
+            <div className="glass rounded-xl p-4 text-center">
+              <h4 className="text-2xl font-bold text-neon-blue">50%</h4>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Reduced Manual Deployment Effort
+              </p>
+            </div>
+
+            <div className="glass rounded-xl p-4 text-center">
+              <h4 className="text-2xl font-bold text-neon-blue">99.9%</h4>
+              <p className="mt-1 text-xs text-muted-foreground">
+                Production Availability
+              </p>
+            </div>
+
+          </div>
+        </section>
       </article>
     </div>
   );
