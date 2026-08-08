@@ -38,73 +38,126 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    id: "eks-multi-region",
-    name: "Multi-region EKS Platform",
-    tagline: "A self-service Kubernetes platform across 3 AWS regions.",
-    problem:
-      "Teams needed isolated, compliant K8s environments with fast provisioning and no ops toil.",
-    solution:
-      "Modular Terraform blueprints, ArgoCD app-of-apps, Karpenter autoscaling, and a golden-path CLI for new services.",
-    impact: [
-      "70% faster environment provisioning",
-      "99.95% platform SLO sustained for 12 months",
-      "Onboarded 25+ microservices with zero SEV1",
-    ],
-    stack: ["AWS", "EKS", "Terraform", "ArgoCD", "Karpenter", "Helm", "Istio"],
-    pipeline: ["Git", "Actions", "Terraform", "EKS", "ArgoCD", "Prometheus"],
-    category: "Platform",
-  },
-  {
-    id: "zero-downtime-cicd",
-    name: "Zero-downtime CI/CD",
-    tagline: "Blue/green + progressive delivery across 24 services.",
-    problem:
-      "Slow, risky releases. Every deploy required a maintenance window.",
-    solution:
-      "Standardized Jenkins shared library, canary via Argo Rollouts, automated smoke tests and SLO-based rollback.",
-    impact: [
-      "Deploys per day: 3 → 17",
-      "Change failure rate: 12% → 2%",
-      "Mean lead time: 3d → 6m 42s",
-    ],
-    stack: ["Jenkins", "GitHub Actions", "Argo Rollouts", "SonarQube", "ECR"],
-    pipeline: ["Git", "Actions", "Jenkins", "Sonar", "ECR", "EKS", "Rollouts"],
-    category: "CI/CD",
-  },
-  {
-    id: "observability-stack",
-    name: "Unified Observability Stack",
-    tagline: "One pane of glass across 40+ services & 3 regions.",
-    problem:
-      "Fragmented logs and metrics across teams; incidents took hours to root-cause.",
-    solution:
-      "Prometheus + Thanos for long-term metrics, Loki for logs, OTel collectors, SLO dashboards and alert routing to on-call.",
-    impact: [
-      "MTTR reduced by 63%",
-      "Alert noise cut by 4x with SLO-based paging",
-      "Full trace/log/metric correlation",
-    ],
-    stack: ["Prometheus", "Thanos", "Grafana", "Loki", "OpenTelemetry"],
-    pipeline: ["Apps", "OTel", "Prometheus", "Loki", "Grafana", "PagerDuty"],
-    category: "Observability",
-  },
-  {
-    id: "secure-secrets",
-    name: "Secure Secrets & Supply Chain",
-    tagline: "Shift-left security across every pipeline.",
-    problem:
-      "Secrets sprawl and unsigned images in production. Compliance audits were painful.",
-    solution:
-      "AWS Secrets Manager + External Secrets Operator, signed images (Cosign), SBOMs, and OPA policies at admission.",
-    impact: [
-      "0 secrets in code across 25+ repos",
-      "100% images signed & scanned",
-      "SOC2 audit closed with zero critical findings",
-    ],
-    stack: ["Secrets Manager", "External Secrets", "Cosign", "Trivy", "OPA"],
-    pipeline: ["Git", "Actions", "Trivy", "Cosign", "ECR", "OPA", "EKS"],
-    category: "Security",
-  },
+  id: "eks-production",
+  name: "Production Kubernetes Deployment on AWS EKS",
+  tagline:
+    "Managed production Kubernetes workloads on AWS EKS using Terraform, Helm and Jenkins CI/CD.",
+  problem:
+    "Applications required consistent deployments, scalable infrastructure and minimal manual intervention.",
+  solution:
+    "Provisioned AWS infrastructure using Terraform, containerized applications with Docker, deployed to Amazon EKS using Helm, and automated deployments through Jenkins CI/CD pipelines.",
+  impact: [
+    "Managed 25+ production microservices",
+    "Reduced infrastructure provisioning time by 70%",
+    "Improved deployment reliability by 30%",
+  ],
+  stack: ["AWS", "EKS", "Terraform", "Helm", "Docker", "Jenkins"],
+  pipeline: [
+    "Git",
+    "GitHub",
+    "Jenkins",
+    "SonarQube",
+    "Docker",
+    "Amazon ECR",
+    "Amazon EKS",
+    "Helm",
+  ],
+  category: "Platform",
+},
+ {
+  id: "cicd-automation",
+  name: "CI/CD Pipeline Automation",
+  tagline:
+    "Designed reusable Jenkins pipelines for automated build, security scanning and Kubernetes deployment.",
+  problem:
+    "Manual deployments increased release time and deployment inconsistencies.",
+  solution:
+    "Implemented Jenkins Shared Libraries, integrated SonarQube and Veracode, built Docker images and deployed applications to Amazon EKS.",
+  impact: [
+    "Reduced manual deployment effort by 50%",
+    "Standardized CI/CD pipelines",
+    "Faster application delivery",
+  ],
+  stack: [
+    "Jenkins",
+    "Docker",
+    "SonarQube",
+    "Veracode",
+    "Amazon ECR",
+    "Helm",
+  ],
+  pipeline: [
+    "Git",
+    "Jenkins",
+    "SonarQube",
+    "Veracode",
+    "Docker",
+    "Amazon ECR",
+    "Amazon EKS",
+  ],
+  category: "CI/CD",
+},
+{
+  id: "monitoring",
+  name: "Production Monitoring & Logging",
+  tagline:
+    "Centralized monitoring and logging for Kubernetes workloads.",
+  problem:
+    "Limited visibility into application health and infrastructure performance.",
+  solution:
+    "Implemented Prometheus, Grafana dashboards and ELK Stack for monitoring, visualization and troubleshooting production workloads.",
+  impact: [
+    "Improved infrastructure visibility",
+    "Reduced incident resolution time",
+    "Centralized monitoring dashboards",
+  ],
+  stack: [
+    "Prometheus",
+    "Grafana",
+    "ELK",
+    "CloudWatch",
+  ],
+  pipeline: [
+    "Applications",
+    "Prometheus",
+    "Grafana",
+    "AlertManager",
+    "ELK",
+  ],
+  category: "Observability",
+},
+{
+  id: "devsecops",
+  name: "DevSecOps Pipeline Integration",
+  tagline:
+    "Integrated automated code quality and vulnerability scanning into CI/CD pipelines.",
+  problem:
+    "Applications required automated quality gates before deployment.",
+  solution:
+    "Integrated SonarQube, Veracode and Amazon ECR image scanning into Jenkins pipelines to improve application security.",
+  impact: [
+    "Improved code quality",
+    "Automated vulnerability scanning",
+    "Reduced security risks",
+  ],
+  stack: [
+    "SonarQube",
+    "Veracode",
+    "Amazon ECR",
+    "Docker",
+    "Jenkins",
+  ],
+  pipeline: [
+    "Git",
+    "Jenkins",
+    "SonarQube",
+    "Veracode",
+    "Docker",
+    "Amazon ECR",
+    "Amazon EKS",
+  ],
+  category: "Security",
+},
 ];
 
 const FILTERS = ["All", "Platform", "CI/CD", "Observability", "Security"] as const;
@@ -121,11 +174,11 @@ function Projects() {
         // /projects
       </p>
       <h1 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
-        Systems I've shipped to production.
+        Production Projects & DevOps Case Studies
       </h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
-        Every project below has been on-called, load-tested, and measured
-        against real SLOs. Expand a card for the full architecture story.
+        Production projects built using AWS, Kubernetes, Terraform, Jenkins,
+        Docker and DevSecOps practices across enterprise applications.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-2">
