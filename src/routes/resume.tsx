@@ -135,13 +135,13 @@ function Resume() {
             />
             <Item
               company="Cognizant"
-              role="Programmer Analyst""
-            period="Oct 2023 — Mar 2026"
-            bullets={[
-              "Built reusable Jenkins Shared Libraries.",
-              "Containerized applications using Docker.",
-              "Managed Kubernetes deployments using Helm.",
-            ]}
+              role="Programmer Analyst"
+              period="Oct 2023 — Mar 2026"
+              bullets={[
+                "Built reusable Jenkins Shared Libraries.",
+                "Containerized applications using Docker.",
+                "Managed Kubernetes deployments using Helm.",
+              ]}
             />
             <Item
               company="Cognizant"
@@ -167,6 +167,7 @@ function Resume() {
             </p>
           </div>
         </section>
+        
         <section className="mt-8 border-t border-border pt-6">
           <h3 className="font-display font-semibold mb-4">
             Key Achievements
