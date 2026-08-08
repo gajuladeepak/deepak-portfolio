@@ -25,48 +25,73 @@ export const Route = createFileRoute("/blog")({
 
 const POSTS = [
   {
-    slug: "eks-karpenter-cost",
-    title: "Cutting EKS costs 40% with Karpenter without sacrificing SLOs",
-    date: "2026-06-14",
-    tags: ["AWS", "Kubernetes", "SRE"],
+    slug: "deploying-25-microservices-on-amazon-eks",
+    title: "Deploying 25+ Microservices on Amazon EKS",
+    date: "Coming Soon",
+    readTime: "8 min read",
+    status: "Coming Soon",
+    featured: true,
+    tags: ["AWS", "Kubernetes", "EKS"],
     excerpt:
-      "How we replaced managed node groups with Karpenter across 3 regions and kept a 99.95% SLO.",
+      "Learn how production microservices were deployed and managed on Amazon EKS using Helm, Kubernetes, Jenkins, and Docker.",
   },
   {
-    slug: "terraform-modules-that-scale",
-    title: "Terraform modules that survive a team of 40",
-    date: "2026-04-02",
-    tags: ["Terraform", "Cloud"],
+    slug: "terraform-infrastructure-automation",
+    title: "Provisioning AWS Infrastructure Using Terraform Modules",
+    date: "Coming Soon",
+    readTime: "7 min read",
+    status: "Coming Soon",
+    featured: false,
+    tags: ["AWS", "Terraform", "IaC"],
     excerpt:
-      "Interface-first modules, ownership boundaries, and the patterns that keep IaC clean at scale.",
+      "A practical guide to building reusable Terraform modules that reduced infrastructure provisioning time by 70%.",
   },
   {
-    slug: "slo-alerting",
-    title: "From CPU alerts to SLO alerts (and why it changed everything)",
-    date: "2026-02-11",
-    tags: ["SRE", "Observability"],
+    slug: "kubernetes-monitoring-prometheus-grafana",
+    title: "Monitoring Kubernetes Clusters with Prometheus & Grafana",
+    date: "Coming Soon",
+    readTime: "6 min read",
+    status: "Coming Soon",
+    featured: false,
+    tags: ["Monitoring", "Prometheus", "Grafana"],
     excerpt:
-      "Alerting on user-visible symptoms cut our pager noise 4x and made on-call sustainable again.",
+      "How Kubernetes workloads were monitored using Prometheus, Grafana, and production-ready alerting dashboards.",
   },
   {
-    slug: "supply-chain",
-    title: "Signing images, SBOMs, and admission policies in 200 lines",
-    date: "2025-12-08",
-    tags: ["DevOps", "Security"],
+    slug: "jenkins-sonarqube-veracode",
+    title: "Integrating SonarQube & Veracode into Jenkins Pipelines",
+    date: "Coming Soon",
+    readTime: "7 min read",
+    status: "Coming Soon",
+    featured: false,
+    tags: ["Jenkins", "DevSecOps", "CI/CD"],
     excerpt:
-      "Cosign + Trivy + OPA is the minimum viable software supply chain — here's the whole recipe.",
+      "Automating code quality and security scanning with SonarQube and Veracode in Jenkins CI/CD pipelines.",
   },
   {
-    slug: "docker-images-slim",
-    title: "Docker images: a 60% size reduction playbook",
-    date: "2025-10-22",
-    tags: ["Docker", "CI/CD"],
+    slug: "docker-multistage-builds",
+    title: "Building Optimized Docker Images with Multi-stage Builds",
+    date: "Coming Soon",
+    readTime: "5 min read",
+    status: "Coming Soon",
+    featured: false,
+    tags: ["Docker", "Containers", "CI/CD"],
     excerpt:
-      "Multi-stage builds, distroless, and cache tricks that actually move the needle in real repos.",
+      "Building lightweight Docker images using multi-stage builds to improve deployment speed and reduce image size.",
   },
 ];
 
-const TAGS = ["All", "AWS", "Kubernetes", "Terraform", "Docker", "CI/CD", "SRE", "Observability", "Security"];
+const TAGS = [
+  "All",
+  "AWS",
+  "Terraform",
+  "Kubernetes",
+  "Docker",
+  "Jenkins",
+  "CI/CD",
+  "Monitoring",
+  "DevSecOps",
+];
 
 function Blog() {
   const [q, setQ] = useState("");
