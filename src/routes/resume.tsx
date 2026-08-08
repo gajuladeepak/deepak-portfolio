@@ -58,10 +58,21 @@ function Resume() {
           {copied ? <Check className="h-4 w-4 text-success" /> : <Copy className="h-4 w-4" />}
           {copied ? "Copied" : "Copy email"}
         </button>
-        <a href="https://www.linkedin.com/in/gajula-deepak/" className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm">
+        <a
+          href="https://www.linkedin.com/in/gajula-deepak/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm"
+        >
           <Linkedin className="h-4 w-4" /> LinkedIn
         </a>
-        <a href="https://github.com/gajuladeepak" className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm">
+
+        <a
+          href="https://github.com/gajuladeepak"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm"
+        >
           <Github className="h-4 w-4" /> GitHub
         </a>
       </div>
