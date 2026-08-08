@@ -23,7 +23,7 @@ export const Route = createFileRoute("/resume")({
 function Resume() {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
-    await navigator.clipboard.writeText("hello@example.com");
+    await navigator.clipboard.writeText("deepakgajula15@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 1600);
   };
