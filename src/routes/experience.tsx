@@ -32,62 +32,88 @@ type Role = {
 
 const ROLES: Role[] = [
   {
-    company: "Nimbus Cloud",
-    role: "Senior DevOps Engineer",
-    period: "2023 — Present",
+    company: "Cognizant",
+    role: "Associate (AWS DevOps Engineer)",
+    period: "Mar 2026 — Present",
     responsibilities: [
-      "Own the internal developer platform on EKS",
-      "Design multi-region infra with Terraform + Terragrunt",
-      "Lead SRE practices, on-call runbooks and postmortems",
+      "Managed production Kubernetes workloads on Amazon EKS.",
+      "Automated infrastructure provisioning using Terraform.",
+      "Maintained reusable Jenkins Shared Library pipelines.",
     ],
     achievements: [
-      "Scaled platform from 10 → 25+ microservices",
-      "Cut infra costs by 34% via right-sizing & Karpenter",
-      "Introduced SLO-based alerting; MTTR ↓ 63%",
+      "Managed 25+ production microservices.",
+      "Improved deployment reliability by 30%.",
+      "Reduced infrastructure provisioning time by 70%.",
     ],
-    stack: ["AWS", "EKS", "Terraform", "ArgoCD", "Prometheus", "Grafana"],
+    stack: [
+      "AWS",
+      "EKS",
+      "Terraform",
+      "Helm",
+      "Docker",
+      "Jenkins",
+      "SonarQube",
+      "Veracode",
+    ],
     metrics: [
-      ["Uptime", "99.97%"],
-      ["Deploys/day", "17"],
+      ["Microservices", "25+"],
+      ["Provisioning", "-70%"],
     ],
   },
+
   {
-    company: "Vector Systems",
-    role: "DevOps Engineer",
-    period: "2021 — 2023",
+    company: "Cognizant",
+    role: "Programmer Analyst",
+    period: "Oct 2023 — Mar 2026",
     responsibilities: [
-      "Migrated monolith to containerized services on ECS + EKS",
-      "Built shared Jenkins library used by 15+ teams",
-      "Implemented centralized logging with ELK",
+      "Designed CI/CD pipelines using Jenkins.",
+      "Containerized applications using Docker.",
+      "Implemented Helm-based deployments on Amazon EKS.",
     ],
     achievements: [
-      "Reduced Docker image sizes by 60%",
-      "Cut CI build times from 22m to 4m",
-      "0-downtime migration for a 4M user product",
+      "Reduced manual deployment effort by 50%.",
+      "Built reusable Jenkins Shared Libraries.",
+      "Reduced Docker image sizes by 60%.",
     ],
-    stack: ["AWS", "ECS", "Jenkins", "Docker", "ELK", "Terraform"],
+    stack: [
+      "AWS",
+      "Docker",
+      "Jenkins",
+      "Terraform",
+      "Helm",
+      "Amazon ECR",
+    ],
     metrics: [
-      ["Build time", "-82%"],
-      ["Images", "60% smaller"],
+      ["Automation", "50%"],
+      ["Docker", "-60%"],
     ],
   },
+
   {
-    company: "Bitline",
-    role: "Cloud Engineer",
-    period: "2019 — 2021",
+    company: "Cognizant",
+    role: "Programmer Analyst Trainee",
+    period: "Oct 2022 — Oct 2023",
     responsibilities: [
-      "Automated AWS provisioning with Terraform",
-      "Hardened IAM, VPC and security groups baselines",
-      "On-call rotation and incident response",
+      "Provisioned AWS infrastructure using Terraform.",
+      "Worked on Linux administration and Shell scripting.",
+      "Automated configuration management using Ansible.",
     ],
     achievements: [
-      "Automated 90% of previously manual provisioning",
-      "Passed first SOC2 audit as lead engineer",
+      "Built Infrastructure as Code modules.",
+      "Improved provisioning consistency.",
+      "Automated repetitive deployment tasks.",
     ],
-    stack: ["AWS", "Terraform", "Bash", "Python", "CloudWatch"],
+    stack: [
+      "AWS",
+      "Terraform",
+      "Linux",
+      "Shell",
+      "Python",
+      "Ansible",
+    ],
     metrics: [
-      ["Automation", "90%"],
-      ["Incidents", "-45%"],
+      ["IaC", "100%"],
+      ["Automation", "↑"],
     ],
   },
 ];
@@ -100,7 +126,7 @@ function Experience() {
         // career.log
       </p>
       <h1 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
-        5+ years engineering production platforms.
+        4+ Years Delivering Production AWS DevOps Solutions.
       </h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
         Roles I've held, systems I've shipped, and the numbers behind them.
@@ -112,11 +138,11 @@ function Experience() {
           return (
             <li key={r.company} className="pl-8 relative">
               <span className="absolute -left-[13px] top-3 h-6 w-6 rounded-full bg-background border border-neon-blue/40 grid place-items-center glow-blue">
-                <Briefcase className="h-3 w-3 text-neon-blue" />
+                <Briefcase className="h-4 w-4 text-neon-blue" />
               </span>
               <button
                 onClick={() => setOpen(isOpen ? -1 : i)}
-                className="w-full text-left glass rounded-xl p-5 hover:border-neon-blue/40 transition-all"
+                className="w-full text-left glass rounded-xl p-6 hover:border-neon-blue/40 transition-all duration-300""
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
@@ -136,12 +162,12 @@ function Experience() {
                 </div>
 
                 {isOpen && (
-                  <div className="mt-5 grid gap-4 md:grid-cols-2">
+                  <div className="mt-6 grid gap-6 md:grid-cols-2 animate-in fade-in duration-300">
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-mono text-muted-foreground mb-2">
                         Responsibilities
                       </p>
-                      <ul className="space-y-1.5 text-sm">
+                      <ul className="space-y-3 text-[15px] leading-7">
                         {r.responsibilities.map((x) => (
                           <li key={x} className="flex gap-2">
                             <span className="text-neon-blue">▸</span>
@@ -154,7 +180,7 @@ function Experience() {
                       <p className="text-[10px] uppercase tracking-widest font-mono text-muted-foreground mb-2">
                         Achievements
                       </p>
-                      <ul className="space-y-1.5 text-sm">
+                      <ul className="space-y-3 text-[15px] leading-7">
                         {r.achievements.map((x) => (
                           <li key={x} className="flex gap-2">
                             <span className="text-success">✓</span>
