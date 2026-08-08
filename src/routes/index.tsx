@@ -67,7 +67,7 @@ function Home() {
       <section className="relative pt-8 md:pt-16 pb-20">
         <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs font-mono text-muted-foreground mb-6">
           <span className="h-1.5 w-1.5 rounded-full bg-success animate-pulse-glow" />
-          available for staff / senior devops roles · remote or eu
+          Available for AWS DevOps Engineer, AWS cloud Engineer, Kuberneted Engineer Roles • Hyderabad • Remote • Hybrid
         </div>
 
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight">
