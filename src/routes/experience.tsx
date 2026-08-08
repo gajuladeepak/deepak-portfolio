@@ -142,7 +142,7 @@ function Experience() {
               </span>
               <button
                 onClick={() => setOpen(isOpen ? -1 : i)}
-                className="w-full text-left glass rounded-xl p-6 hover:border-neon-blue/40 transition-all duration-300""
+                className="w-full text-left glass rounded-xl p-6 hover:border-neon-blue/40 transition-all duration-300"
               >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <div>
