@@ -24,33 +24,33 @@ export const Route = createFileRoute("/about")({
 
 const JOURNEY = [
   {
-    year: "2019",
-    title: "Started with Linux & Bash",
-    body: "Fell in love with automation. Wrote way too many shell scripts.",
+    year: "2022",
+    title: "Programmer Analyst Trainee",
+    body: "Joined Cognizant and started working on AWS infrastructure, Linux administration, Shell scripting, Terraform, and Ansible while supporting the Pearson Education project.",
     icon: GraduationCap,
   },
   {
-    year: "2020",
-    title: "Cloud engineer at scale",
-    body: "First AWS production workloads. Learned that observability is not optional.",
+    year: "2023",
+    title: "Programmer Analyst (DevOps Engineer)",
+    body: "Transitioned into AWS DevOps, automating cloud infrastructure with Terraform, managing CI/CD pipelines, and supporting production deployments for enterprise applications.",
     icon: Compass,
   },
   {
-    year: "2022",
-    title: "Kubernetes & Platform",
-    body: "Built internal developer platforms on EKS with Helm, ArgoCD and Terraform.",
+    year: "2024",
+    title: "Programmer Analyst (DevOps Engineer)",
+    body: "Managed Docker containers, Amazon EKS clusters, Helm deployments, Jenkins Shared Library pipelines, and GitHub Actions while supporting 25+ production microservices.",
     icon: Sparkles,
   },
   {
-    year: "2024",
-    title: "DevSecOps focus",
-    body: "Shift-left security, policy-as-code, and supply-chain hardening.",
+    year: "2026",
+    title: "Associate (DevOps Engineer)",
+    body: "Promoted to Associate at Cognizant, managing production AWS platforms across multiple projects with a focus on reliability, automation, security, and platform scalability.",
     icon: Target,
   },
   {
     year: "Now",
-    title: "Platform engineering",
-    body: "Turning ops into product — golden paths, self-service, and reliability by default.",
+    title: "Associate (DevOps Engineer)",
+    body: "Managing production workloads on AWS EKS using Terraform, Docker, Kubernetes, Jenkins, Prometheus, Grafana, and DevSecOps practices to deliver secure and reliable cloud platforms.",
     icon: Rocket,
   },
 ];
@@ -62,20 +62,17 @@ function About() {
         // about.md
       </p>
       <h1 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
-        Engineer who treats infrastructure as a product.
+        AWS DevOps Engineer building secure, scalable cloud infrastructure.
       </h1>
       <p className="mt-5 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-        I design cloud platforms the way great teams design software — with
-        clean interfaces, tests, observability, and boring, repeatable
-        deployments. My work sits at the intersection of AWS, Kubernetes, and
-        developer experience.
+       AWS DevOps Engineer with 4+ years of experience building and managing production workloads on AWS. Experienced in Kubernetes (Amazon EKS), Terraform, Jenkins, Docker, Linux, CI/CD automation, monitoring, and DevSecOps. Passionate about automating infrastructure, improving deployment reliability, and enabling scalable cloud platforms.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-3">
         {[
           {
             k: "Mission",
-            v: "Make production a place developers want to ship to.",
+            v: "Build reliable, secure and automated cloud platforms that enable faster and safer software delivery.",
           },
           {
             k: "Values",
@@ -83,7 +80,7 @@ function About() {
           },
           {
             k: "Focus",
-            v: "Platform engineering, SRE, DevSecOps.",
+            v: "AWS, Kubernetes, Terraform, CI/CD, DevSecOps.",
           },
         ].map((x) => (
           <div key={x.k} className="glass rounded-xl p-5">
