@@ -58,10 +58,10 @@ function Resume() {
           {copied ? <Check className="h-4 w-4 text-success" /> : <Copy className="h-4 w-4" />}
           {copied ? "Copied" : "Copy email"}
         </button>
-        <a href="https://linkedin.com" className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm">
+        <a href="https://www.linkedin.com/in/gajula-deepak/" className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm">
           <Linkedin className="h-4 w-4" /> LinkedIn
         </a>
-        <a href="https://github.com" className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm">
+        <a href="https://github.com/gajuladeepak" className="inline-flex items-center gap-2 rounded-lg glass px-4 py-2.5 text-sm">
           <Github className="h-4 w-4" /> GitHub
         </a>
       </div>
@@ -167,7 +167,7 @@ function Resume() {
             </p>
           </div>
         </section>
-        
+
         <section className="mt-8 border-t border-border pt-6">
           <h3 className="font-display font-semibold mb-4">
             Key Achievements
