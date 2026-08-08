@@ -41,16 +41,16 @@ function Contact() {
       <div className="mt-10 grid gap-6 md:grid-cols-5">
         <aside className="md:col-span-2 space-y-3">
           {[
-            { icon: Mail, label: "Email", value: "hello@example.com", href: "mailto:hello@example.com" },
-            { icon: Linkedin, label: "LinkedIn", value: "/in/deepak", href: "https://linkedin.com" },
-            { icon: Github, label: "GitHub", value: "/deepak", href: "https://github.com" },
-            { icon: CalendarClock, label: "Calendly", value: "Book 30 min", href: "https://calendly.com" },
-            { icon: MapPin, label: "Location", value: "Remote · EU / IN" },
+            { icon: Mail, label: "Email", value: "deepakgajula15@gmai.com", href: "mailto:deepakgajula15@gmail.com" },
+            { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/gajula-deepak/", href: "https://www.linkedin.com/in/gajula-deepak/" },
+            { icon: Github, label: "GitHub", value: "github.com/gajuladeepak", href: "https://github.com/gajuladeepak" },
+            { icon: CalendarClock, label: "Availability", value: "Available for Interviews" },
+            { icon: MapPin, label: "Location", value: "Hyderabad · India" },
           ].map(({ icon: Icon, label, value, href }) => (
             <a
               key={label}
               href={href}
-              className="flex items-center gap-3 glass rounded-xl p-4 hover:border-neon-blue/40 transition group"
+              className="group flex items-center gap-4 rounded-2xl border border-border glass p-5 transition-all duration-300 hover:-translate-y-1 hover:border-neon-blue/50 hover:shadow-[0_0_25px_rgba(59,130,246,0.12)]"
             >
               <div className="h-9 w-9 rounded-lg glass grid place-items-center group-hover:glow-blue transition">
                 <Icon className="h-4 w-4 text-neon-blue" />
@@ -70,7 +70,7 @@ function Contact() {
             e.preventDefault();
             setSent(true);
           }}
-          className="md:col-span-3 glass-strong rounded-2xl p-6"
+          className="md:col-span-3 rounded-2xl border border-border glass-strong p-8 shadow-lg"
         >
           {sent ? (
             <div className="min-h-[300px] grid place-items-center text-center">
@@ -79,7 +79,7 @@ function Contact() {
                   <Check className="h-6 w-6 text-success" />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold">
-                  Message queued for delivery.
+                  Thank you! Your message has been received.
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground font-mono">
                   200 OK · we'll be in touch shortly
@@ -145,7 +145,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full glass rounded-lg px-4 py-2.5 text-sm outline-none focus:border-neon-blue/60"
+        className="w-full rounded-xl border border-border bg-transparent px-4 py-3 text-sm transition-all duration-300 outline-none focus:border-neon-blue/60 focus:shadow-[0_0_18px_rgba(59,130,246,0.18)]"
       />
     </div>
   );
