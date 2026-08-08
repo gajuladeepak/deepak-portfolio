@@ -34,7 +34,7 @@ function Resume() {
       </p>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <h1 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
-          The résumé, in one page.
+          Resume & Professional Profile
         </h1>
       </div>
 
@@ -71,57 +71,86 @@ function Resume() {
           <div>
             <h2 className="font-display text-2xl font-semibold">Deepak</h2>
             <p className="text-muted-foreground text-sm">
-              AWS DevOps Engineer · Platform & SRE
+              AWS DevOps Engineer · 4+ Years Experience
             </p>
           </div>
           <div className="text-sm text-muted-foreground font-mono">
             <div className="flex items-center gap-2">
-              <Mail className="h-3.5 w-3.5" /> hello@example.com
+              <Mail className="h-3.5 w-3.5" /> deepakgajula15@gmail.com
             </div>
-            <div>Remote · EU / IN</div>
+            <div>Hyderabad · India</div>
           </div>
         </header>
 
         <section className="mt-6">
           <h3 className="font-display font-semibold mb-2">Summary</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            5+ years designing and operating cloud platforms on AWS and
-            Kubernetes. Deep expertise in Terraform, CI/CD, observability and
-            DevSecOps. Track record of shipping self-service platforms that
-            move teams faster while raising reliability.
+            AWS DevOps Engineer with 4+ years of experience designing,
+            automating and maintaining cloud infrastructure on AWS.
+
+            Experienced in Kubernetes (Amazon EKS), Terraform, Docker,
+            Helm, Jenkins, Linux, Monitoring and DevSecOps.
+
+            Skilled in building CI/CD pipelines, Infrastructure as Code,
+            containerized deployments and production support for
+            enterprise microservices.
           </p>
+        </section>
+
+        <section className="mt-6">
+          <h3 className="font-display font-semibold mb-3">
+            Professional Highlights
+          </h3>
+
+          <ul className="grid md:grid-cols-2 gap-2 text-sm marker:text-neon-blue list-disc ml-5">
+
+            <li>4+ Years AWS DevOps Experience</li>
+
+            <li>Managed 25+ Production Microservices</li>
+
+            <li>Reduced Infrastructure Provisioning Time by 70%</li>
+
+            <li>Reduced Manual Deployment Effort by 50%</li>
+
+            <li>99.9% Production Availability</li>
+
+            <li>Production Kubernetes (Amazon EKS)</li>
+
+          </ul>
+
         </section>
 
         <section className="mt-6">
           <h3 className="font-display font-semibold mb-3">Experience</h3>
           <div className="space-y-4 text-sm">
             <Item
-              company="Nimbus Cloud"
-              role="Senior DevOps Engineer"
-              period="2023 — Present"
+              company="Cognizant"
+              role="Associate (AWS DevOps Engineer)"
+              period="Mar 2026 — Present"
               bullets={[
-                "Own EKS-based internal platform serving 25+ services.",
-                "Cut infra spend 34% via Karpenter and rightsizing.",
-                "SLO-based alerting reduced MTTR by 63%.",
+                "Managed 25+ production microservices on Amazon EKS.",
+                "Provisioned AWS infrastructure using Terraform modules.",
+                "Automated CI/CD pipelines using Jenkins Shared Libraries.",
               ]}
             />
             <Item
-              company="Vector Systems"
-              role="DevOps Engineer"
-              period="2021 — 2023"
-              bullets={[
-                "Migrated monolith to containers on ECS/EKS with 0 downtime.",
-                "Built shared Jenkins library for 15+ teams.",
-                "Reduced Docker image sizes 60%; CI 22m → 4m.",
-              ]}
+              company="Cognizant"
+              role="Programmer Analyst""
+            period="Oct 2023 — Mar 2026"
+            bullets={[
+              "Built reusable Jenkins Shared Libraries.",
+              "Containerized applications using Docker.",
+              "Managed Kubernetes deployments using Helm.",
+            ]}
             />
             <Item
-              company="Bitline"
-              role="Cloud Engineer"
-              period="2019 — 2021"
+              company="Cognizant"
+              role="Programmer Analyst Trainee"
+              period="Oct 2022 — Oct 2023"
               bullets={[
-                "Automated 90% of AWS provisioning with Terraform.",
-                "Lead engineer on first successful SOC2 audit.",
+                "Provisioned AWS infrastructure using Terraform.",
+                "Automated Linux server configuration using Ansible.",
+                "Developed Shell scripts for infrastructure automation.",
               ]}
             />
           </div>
@@ -131,19 +160,11 @@ function Resume() {
           <div>
             <h3 className="font-display font-semibold mb-2">Core stack</h3>
             <p className="text-sm text-muted-foreground">
-              AWS · EKS · Terraform · Helm · Docker · Jenkins · GitHub Actions ·
-              Prometheus · Grafana · ELK · Python · Bash · Linux · ArgoCD ·
-              Istio · Vault.
+              AWS · Amazon EKS · Terraform · Docker · Helm · Jenkins ·
+              Jenkins Shared Libraries · Amazon ECR · SonarQube ·
+              Veracode · Prometheus · Grafana · ELK · Linux ·
+              Shell Scripting · Python · Ansible
             </p>
-          </div>
-          <div>
-            <h3 className="font-display font-semibold mb-2">Certifications</h3>
-            <ul className="text-sm text-muted-foreground space-y-1">
-              <li>· AWS Certified Solutions Architect – Associate</li>
-              <li>· AWS Certified DevOps Engineer – Professional</li>
-              <li>· Certified Kubernetes Administrator (CKA)</li>
-              <li>· HashiCorp Terraform Associate</li>
-            </ul>
           </div>
         </section>
       </article>
