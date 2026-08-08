@@ -18,7 +18,7 @@ import { Counter } from "../components/Counter";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Deepak — AWS DevOps Engineer · Cloud Command Center" },
+      { title: "Deepak Gajula | AWS DevOps Engineer | Kubernetes | Terraform | Jenkins | Hyderabad" },
       {
         name: "description",
         content:
@@ -50,14 +50,14 @@ const METRICS = [
 const PIPELINE = [
   { label: "Developer", icon: GitBranch },
   { label: "GitHub", icon: GitBranch },
-  { label: "Actions", icon: Zap },
+  { label: "GitHub Webhook", icon: Zap },
   { label: "Jenkins", icon: Server },
   { label: "SonarQube", icon: ShieldCheck },
-  { label: "Docker", icon: Container },
-  { label: "ECR", icon: Cloud },
-  { label: "Terraform", icon: Boxes },
-  { label: "EKS", icon: Server },
-  { label: "Grafana", icon: Activity },
+  { label: "Veracode", icon: ShieldCheck },
+  { label: "Docker Build", icon: Container },
+  { label: "Amazon ECR", icon: Cloud },
+  { label: "Amazon EKS", icon: Server },
+  { label: "Helm Deploy", icon: Boxes },
 ];
 
 function Home() {
@@ -71,7 +71,7 @@ function Home() {
         </div>
 
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight">
-          Hi, I'm <span className="text-gradient">Deepak</span>.
+          Hi, I'm <span className="text-gradient">Deepak Gajula</span>.
           <br />
           I engineer{" "}
           <TypingRotator
