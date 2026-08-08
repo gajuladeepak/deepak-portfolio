@@ -109,11 +109,10 @@ function Blog() {
             <button
               key={t}
               onClick={() => setTag(t)}
-              className={`px-3 py-1.5 rounded-full text-xs font-mono transition ${
-                tag === t
-                  ? "bg-gradient-to-r from-neon-blue to-neon-purple text-background"
-                  : "glass text-muted-foreground hover:text-foreground"
-              }`}
+              className={`px-3 py-1.5 rounded-full text-xs font-mono transition ${tag === t
+                ? "bg-gradient-to-r from-neon-blue to-neon-purple text-background"
+                : "glass text-muted-foreground hover:border-neon-blue/40 hover:text-white"
+                }`}
             >
               {t}
             </button>
@@ -125,8 +124,9 @@ function Blog() {
         {list.map((p) => (
           <li key={p.slug}>
             <a
-              href="#"
-              className="group block glass rounded-xl p-5 hover:border-neon-blue/40 transition-all"
+              href={`/blog/${p.slug}`}
+              aria-label={`Read ${p.title}`}
+              className="group block glass rounded-2xl p-6 border border-border hover:border-neon-blue/50 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(59,130,246,0.12)] transition-all duration-300"
             >
               <div className="flex items-baseline justify-between gap-3">
                 <div className="min-w-0">
@@ -143,22 +143,27 @@ function Blog() {
                       </span>
                     ))}
                   </div>
-                  <h2 className="font-display font-semibold text-lg group-hover:text-gradient transition-all">
+                  <h2 className="font-display text-xl font-semibold tracking-tight transition-colors duration-300 group-hover:text-neon-blue">
                     {p.title}
                   </h2>
                   <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
                     {p.excerpt}
                   </p>
                 </div>
-                <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-neon-blue group-hover:translate-x-0.5 transition" />
+                <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-all duration-300 group-hover:text-neon-blue group-hover:translate-x-1" />
               </div>
             </a>
           </li>
         ))}
         {list.length === 0 && (
-          <p className="text-sm text-muted-foreground font-mono">
-            no posts match this query.
-          </p>
+          <div className="rounded-xl border border-dashed border-border py-12 text-center">
+            <p className="font-mono text-sm text-muted-foreground">
+              No posts found.
+            </p>
+            <p className="mt-2 text-xs text-muted-foreground">
+              Try another keyword or category.
+            </p>
+          </div>
         )}
       </ul>
 
