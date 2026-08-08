@@ -40,19 +40,45 @@ const CATEGORIES: Category[] = [
     icon: Cloud,
     accent: "from-neon-blue to-neon-cyan",
     skills: [
-      { name: "AWS", level: 95, years: "5y", note: "EKS · EC2 · Lambda · IAM · RDS · S3" },
-      { name: "Multi-region HA", level: 88, years: "4y" },
-      { name: "Cost optimization", level: 82, years: "3y" },
-    ],
+      {
+        name: "AWS",
+        level: 95,
+        years: "4+ y",
+        note: "EKS · EC2 · IAM · VPC · ALB · ECR · Route53 · S3",
+      },
+      {
+        name: "Infrastructure Provisioning",
+        level: 90,
+        years: "4 y",
+      },
+      {
+        name: "Production Support",
+        level: 92,
+        years: "4 y",
+      },
+  ],
   },
   {
     title: "Infrastructure as Code",
     icon: Boxes,
     accent: "from-neon-purple to-neon-blue",
     skills: [
-      { name: "Terraform", level: 94, years: "5y", note: "modules · workspaces · TFC" },
-      { name: "Terragrunt", level: 82, years: "3y" },
-      { name: "Pulumi", level: 60, years: "1y" },
+      {
+        name: "Terraform",
+        level: 95,
+        years: "4+ y",
+        note: "Modules · Remote State · Workspaces",
+      },
+      {
+        name: "Ansible",
+        level: 88,
+        years: "2 y",
+      },
+      {
+        name: "Shell Automation",
+        level: 90,
+        years: "4 y",
+      },
     ],
   },
   {
@@ -60,10 +86,26 @@ const CATEGORIES: Category[] = [
     icon: Container,
     accent: "from-neon-cyan to-neon-purple",
     skills: [
-      { name: "Kubernetes / EKS", level: 92, years: "4y" },
-      { name: "Helm", level: 90, years: "4y" },
-      { name: "Docker", level: 95, years: "5y" },
-      { name: "ArgoCD", level: 85, years: "3y" },
+            {
+              name: "Amazon EKS",
+              level: 94,
+              years: "3+ y",
+            },
+            {
+              name: "Docker",
+              level: 95,
+              years: "4+ y",
+            },
+            {
+              name: "Helm",
+              level: 90,
+              years: "3 y",
+            },
+            {
+              name: "Kubernetes",
+              level: 94,
+              years: "3+ y",
+            },
     ],
   },
   {
@@ -71,9 +113,21 @@ const CATEGORIES: Category[] = [
     icon: GitBranch,
     accent: "from-neon-blue to-neon-purple",
     skills: [
-      { name: "GitHub Actions", level: 92, years: "4y" },
-      { name: "Jenkins", level: 90, years: "5y" },
-      { name: "GitLab CI", level: 80, years: "3y" },
+      {
+        name: "Jenkins",
+        level: 96,
+        years: "4+ y",
+      },
+      {
+        name: "Jenkins Shared Libraries",
+        level: 92,
+        years: "3 y",
+      },
+      {
+        name: "Git",
+        level: 90,
+        years: "4 y",
+      },
     ],
   },
   {
@@ -81,10 +135,21 @@ const CATEGORIES: Category[] = [
     icon: Activity,
     accent: "from-neon-purple to-neon-cyan",
     skills: [
-      { name: "Prometheus", level: 88, years: "4y" },
-      { name: "Grafana", level: 90, years: "4y" },
-      { name: "ELK / OpenSearch", level: 82, years: "3y" },
-      { name: "OpenTelemetry", level: 78, years: "2y" },
+      {
+        name: "Prometheus",
+        level: 90,
+        years: "3 y",
+      },
+      {
+        name: "Grafana",
+        level: 90,
+        years: "3 y",
+      },
+      {
+        name: "ELK Stack",
+        level: 85,
+        years: "2 y",
+      },
     ],
   },
   {
@@ -92,10 +157,26 @@ const CATEGORIES: Category[] = [
     icon: ShieldCheck,
     accent: "from-neon-blue to-neon-cyan",
     skills: [
-      { name: "IAM / SCPs", level: 90, years: "4y" },
-      { name: "Secrets Manager / Vault", level: 85, years: "3y" },
-      { name: "SonarQube · Veracode", level: 80, years: "3y" },
-      { name: "OPA / Kyverno", level: 75, years: "2y" },
+      {
+        name: "IAM",
+        level: 92,
+        years: "4 y",
+      },
+      {
+        name: "SonarQube",
+        level: 90,
+        years: "3 y",
+      },
+      {
+        name: "Veracode",
+        level: 88,
+        years: "3 y",
+      },
+      {
+        name: "Amazon ECR Image Scanning",
+        level: 86,
+        years: "2 y",
+      },
     ],
   },
   {
@@ -103,9 +184,21 @@ const CATEGORIES: Category[] = [
     icon: Terminal,
     accent: "from-neon-cyan to-neon-blue",
     skills: [
-      { name: "Python", level: 85, years: "5y" },
-      { name: "Bash", level: 92, years: "5y" },
-      { name: "Go", level: 65, years: "1y" },
+      {
+        name: "Python",
+        level: 86,
+        years: "2 y",
+      },
+      {
+        name: "Shell Scripting",
+        level: 92,
+        years: "4 y",
+      },
+      {
+        name: "Linux Automation",
+        level: 90,
+        years: "4 y",
+      },
     ],
   },
   {
@@ -113,9 +206,21 @@ const CATEGORIES: Category[] = [
     icon: Network,
     accent: "from-neon-purple to-neon-blue",
     skills: [
-      { name: "Linux", level: 92, years: "5y" },
-      { name: "VPC · Route53 · CloudFront", level: 88, years: "4y" },
-      { name: "Istio / Service Mesh", level: 72, years: "2y" },
+      {
+        name: "Linux",
+        level: 92,
+        years: "4 y",
+      },
+      {
+        name: "VPC",
+        level: 90,
+        years: "4 y",
+      },
+      {
+        name: "Route53",
+        level: 86,
+        years: "3 y",
+      },
     ],
   },
 ];
@@ -127,11 +232,14 @@ function Skills() {
         // capabilities
       </p>
       <h1 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">
-        The stack behind the platform.
+        AWS DevOps & Cloud Engineering Skills
       </h1>
       <p className="mt-4 max-w-2xl text-muted-foreground">
-        A pragmatic toolkit tuned for reliability and developer velocity. Every
-        item here has shipped to production, been on-called, and paid the rent.
+        <p className="mt-4 max-w-3xl text-muted-foreground leading-8">
+            Hands-on experience across AWS, Kubernetes, Terraform, Docker, Jenkins,
+            Linux, Monitoring and DevSecOps gained while building and supporting
+            production enterprise applications.
+        </p>
       </p>
 
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
