@@ -235,12 +235,11 @@ function Skills() {
         AWS DevOps & Cloud Engineering Skills
       </h1>
 
-        <p className="mt-4 max-w-3xl text-muted-foreground leading-8">
-          Hands-on experience across AWS, Kubernetes, Terraform, Docker, Jenkins,
-          Linux, Monitoring and DevSecOps gained while building and supporting
-          production enterprise applications.
-        </p>
-  
+      <p className="mt-4 max-w-3xl text-muted-foreground leading-8">
+      Hands-on experience across AWS, Kubernetes, Terraform, Docker, Jenkins,
+      Linux, Monitoring and DevSecOps gained while building and supporting
+      production enterprise applications.
+      </p>
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {CATEGORIES.map((cat) => (
           <div
