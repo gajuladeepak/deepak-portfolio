@@ -59,8 +59,8 @@ const PROJECTS: Project[] = [
     "SonarQube",
     "Docker",
     "Amazon ECR",
-    "Amazon EKS",
     "Helm",
+    "Amazon EKS",
   ],
   category: "Platform",
 },
@@ -101,7 +101,7 @@ const PROJECTS: Project[] = [
   id: "monitoring",
   name: "Production Monitoring & Logging",
   tagline:
-    "Centralized monitoring and logging for Kubernetes workloads.",
+    "Implemented centralized monitoring, logging and alerting for Kubernetes workloads running on AWS EKS.",
   problem:
     "Limited visibility into application health and infrastructure performance.",
   solution:
@@ -134,7 +134,7 @@ const PROJECTS: Project[] = [
   problem:
     "Applications required automated quality gates before deployment.",
   solution:
-    "Integrated SonarQube, Veracode and Amazon ECR image scanning into Jenkins pipelines to improve application security.",
+    "Integrated SonarQube, Veracode and Amazon ECR image scanning into reusable Jenkins Shared Library pipelines to improve application security.",
   impact: [
     "Improved code quality",
     "Automated vulnerability scanning",
@@ -160,7 +160,7 @@ const PROJECTS: Project[] = [
 },
 ];
 
-const FILTERS = ["All", "Platform", "CI/CD", "Observability", "Security"] as const;
+const FILTERS = ["All","AWS","CI/CD","Observability","Security"] as const;
 
 function Projects() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("All");
@@ -293,20 +293,7 @@ function Projects() {
                     </div>
                   </div>
 
-                  <div className="flex gap-2 pt-2">
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground"
-                    >
-                      <Github className="h-3.5 w-3.5" /> repo
-                    </a>
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground"
-                    >
-                      <ExternalLink className="h-3.5 w-3.5" /> case study
-                    </a>
-                  </div>
+
                 </div>
               </div>
             )}
