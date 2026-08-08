@@ -135,13 +135,13 @@ function Resume() {
             />
             <Item
               company="Cognizant"
-              role="Programmer Analyst""
-            period="Oct 2023 — Mar 2026"
-            bullets={[
-              "Built reusable Jenkins Shared Libraries.",
-              "Containerized applications using Docker.",
-              "Managed Kubernetes deployments using Helm.",
-            ]}
+              role="Programmer Analyst"
+              period="Oct 2023 — Mar 2026"
+              bullets={[
+                "Built reusable Jenkins Shared Libraries.",
+                "Containerized applications using Docker.",
+                "Managed Kubernetes deployments using Helm.",
+              ]}
             />
             <Item
               company="Cognizant"
