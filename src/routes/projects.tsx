@@ -127,6 +127,46 @@ const PROJECTS: Project[] = [
   category: "Observability",
 },
 {
+  id: "terraform",
+  name: "AWS Infrastructure Provisioning with Terraform",
+  tagline:
+    "Provisioned reusable AWS infrastructure using Terraform modules for production environments on AWS.",
+
+  problem:
+    "Manual infrastructure provisioning resulted in inconsistent environments, slower deployments and configuration drift.",
+
+  solution:
+    "Designed reusable Terraform modules to provision AWS infrastructure including VPC, IAM, EC2, EKS, ALB and networking resources with Infrastructure as Code best practices.",
+
+  impact: [
+    "Reduced provisioning time by 70%",
+    "Reusable Terraform modules",
+    "Eliminated configuration drift",
+    "Consistent multi-environment deployments",
+  ],
+
+  stack: [
+    "Terraform",
+    "AWS",
+    "Amazon EKS",
+    "VPC",
+    "IAM",
+    "EC2",
+    "ALB",
+    "S3",
+    "DynamoDB",
+  ],
+
+  pipeline: [
+    "Terraform",
+    "Plan",
+    "Review",
+    "Apply",
+    "AWS",
+  ],
+  category: "Infrastructure",
+},
+{
   id: "devsecops",
   name: "DevSecOps Pipeline Integration",
   tagline:
