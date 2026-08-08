@@ -164,6 +164,7 @@ const PROJECTS: Project[] = [
     "Apply",
     "AWS",
   ],
+
   category: "Infrastructure",
 },
 {
