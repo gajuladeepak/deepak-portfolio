@@ -42,7 +42,16 @@ const EMAIL = "deepakgajula15@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/gajula-deepak/";
 const GITHUB = "https://github.com/gajuladeepak";
 
-const rows = [
+type Row = {
+  icon: typeof Mail;
+  label: string;
+  value: string;
+  tone: string;
+  href?: string;
+  badge?: string;
+};
+
+const rows: Row[] = [
   {
     icon: Mail,
     label: "Email",
@@ -75,7 +84,7 @@ const rows = [
     tone: "text-success",
     badge: "Open",
   },
-] as const;
+];
 
 const snapshot = [
   "AWS Cloud (EC2, VPC, IAM, S3, EKS)",
@@ -171,8 +180,7 @@ function Contact() {
           </div>
 
           <ul className="mt-6 divide-y divide-border rounded-xl border border-border/60">
-            {rows.map(({ icon: Icon, label, value, tone, badge, ...rest }) => {
-              const href = "href" in rest ? (rest.href as string) : undefined;
+            {rows.map(({ icon: Icon, label, value, tone, badge, href }) => {
               const Tag: any = href ? "a" : "div";
               return (
                 <li key={label}>
