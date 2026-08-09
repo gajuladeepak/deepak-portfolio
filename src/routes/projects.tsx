@@ -33,7 +33,7 @@ type Project = {
   impact: string[];
   stack: string[];
   pipeline: string[];
-  category: "Platform" | "CI/CD" | "Observability" | "Security";
+  category: "Platform" | "CI/CD" | "Observability" | "Security" | "Infrastructure";
 };
 
 const PROJECTS: Project[] = [
