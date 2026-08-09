@@ -103,9 +103,10 @@ const actions = [
   {
     icon: Download,
     title: "Download Resume",
-    subtitle: "Get my latest resume (PDF)",
-    href: "/resume",
+    subtitle: "ATS Optimized Resume (PDF)",
+    href: "/resume/Deepak_Gajula_AWS_DevOps_Engineer.pdf",
     external: false,
+    download: true,
     ring: "hover:border-neon-blue/60 hover:shadow-[0_0_28px_rgba(59,130,246,0.18)]",
     chip: "bg-neon-blue/12 text-neon-blue",
   },
@@ -186,11 +187,10 @@ function Contact() {
                 <li key={label}>
                   <Tag
                     {...(href ? { href, "aria-label": `${label}: ${value}` } : {})}
-                    className={`group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-3 py-4 transition-all duration-300 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-blue/60 ${
-                      href
+                    className={`group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-3 py-4 transition-all duration-300 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-blue/60 ${href
                         ? "hover:-translate-y-0.5 hover:border-neon-blue/50 hover:bg-white/[0.03] active:translate-y-0 cursor-pointer"
                         : ""
-                    }`}
+                      }`}
                   >
                     <span className="h-10 w-10 shrink-0 rounded-lg glass grid place-items-center transition-shadow duration-300 group-hover:glow-blue">
                       <Icon className={`h-4 w-4 ${tone}`} />
@@ -199,7 +199,7 @@ function Contact() {
                       <span className={`block text-xs font-medium ${tone}`}>
                         {label}
                       </span>
-                      <span className="block truncate text-sm text-foreground">
+                      <span className="block truncate text-sm text-foreground group-hover:text-neon-blue transition-colors">
                         {value}
                       </span>
                     </span>
