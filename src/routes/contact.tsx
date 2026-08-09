@@ -188,8 +188,8 @@ function Contact() {
                   <Tag
                     {...(href ? { href, "aria-label": `${label}: ${value}` } : {})}
                     className={`group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-3 py-4 transition-all duration-300 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-blue/60 ${href
-                        ? "hover:-translate-y-0.5 hover:border-neon-blue/50 hover:bg-white/[0.03] active:translate-y-0 cursor-pointer"
-                        : ""
+                      ? "hover:-translate-y-0.5 hover:border-neon-blue/50 hover:bg-white/[0.03] active:translate-y-0 cursor-pointer"
+                      : ""
                       }`}
                   >
                     <span className="h-10 w-10 shrink-0 rounded-lg glass grid place-items-center transition-shadow duration-300 group-hover:glow-blue">
@@ -260,32 +260,34 @@ function Contact() {
           </ul>
 
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
-            {actions.map(({ icon: Icon, title, subtitle, href, external, ring, chip }) => (
-              <a
-                key={title}
-                href={href}
-                {...(external
-                  ? { target: "_blank", rel: "noreferrer noopener" }
-                  : {})}
-                aria-label={`${title} — ${subtitle}`}
-                className={`group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 rounded-xl border border-border glass p-4 transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-blue/60 ${ring}`}
-              >
-                <span
-                  className={`h-10 w-10 shrink-0 rounded-lg grid place-items-center ${chip}`}
+            {actions.map(
+              ({ icon: Icon, title, subtitle, href, external, download, ring, chip }) => (
+                <a
+                  key={title}
+                  href={href}
+                  download={download}
+                  {...(external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  aria-label={`${title} — ${subtitle}`}
+                  className={`group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 rounded-xl border border-border glass p-4 transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-blue/60 ${ring}`}
                 >
-                  <Icon className="h-5 w-5" />
-                </span>
-                <span className="min-w-0">
-                  <span className="block truncate text-sm font-semibold">
-                    {title}
+                  <span
+                    className={`h-10 w-10 shrink-0 rounded-lg grid place-items-center ${chip}`}
+                  >
+                    <Icon className="h-5 w-5" />
                   </span>
-                  <span className="block truncate text-xs text-muted-foreground">
-                    {subtitle}
+                  <span className="min-w-0">
+                    <span className="block truncate text-sm font-semibold">
+                      {title}
+                    </span>
+                    <span className="block truncate text-xs text-muted-foreground">
+                      {subtitle}
+                    </span>
                   </span>
-                </span>
-                <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground transition-colors duration-300 group-hover:text-foreground" />
-              </a>
-            ))}
+                  <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground transition-colors duration-300 group-hover:text-foreground" />
+                </a>
+              ))}
           </div>
         </section>
       </div>
