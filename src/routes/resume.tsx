@@ -115,7 +115,7 @@ function Resume() {
 
           <ul className="grid md:grid-cols-2 gap-2 text-sm marker:text-neon-blue list-disc ml-5">
 
-            <li>4+ Years AWS DevOps Experience</li>
+            <li>4 Years AWS DevOps Experience</li>
 
             <li>Managed 25+ Production Microservices</li>
 
