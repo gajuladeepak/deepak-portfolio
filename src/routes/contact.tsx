@@ -74,7 +74,7 @@ const rows: Row[] = [
   {
     icon: CalendarDays,
     label: "Experience",
-    value: "4+ Years",
+    value: "4 Years",
     tone: "text-warning",
   },
   {

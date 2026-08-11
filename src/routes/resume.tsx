@@ -82,7 +82,7 @@ function Resume() {
           <div>
             <h2 className="font-display text-2xl font-semibold">Deepak</h2>
             <p className="text-muted-foreground text-sm">
-              AWS DevOps Engineer · 4+ Years Experience
+              AWS DevOps Engineer · 4 Years Experience
             </p>
           </div>
           <div className="text-sm text-muted-foreground font-mono">
@@ -96,7 +96,7 @@ function Resume() {
         <section className="mt-6">
           <h3 className="font-display font-semibold mb-2">Summary</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            AWS DevOps Engineer with 4+ years of experience designing,
+            AWS DevOps Engineer with 4 years of experience designing,
             automating and maintaining cloud infrastructure on AWS.
 
             Experienced in Kubernetes (Amazon EKS), Terraform, Docker,
